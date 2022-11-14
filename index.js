@@ -130,7 +130,7 @@ app.get('/tiktok/:type', async (req, res) => {
 			if (!req.query.user) return res.json({ message: 'Required an username' })
 			let result = await urlebird.user(req.query.user)
 			return res.json({ result })
-		} } else if (/^detail$/i.test(req.params.type)) {
+		} else if (/^detail$/i.test(req.params.type)) {
 			if (!req.query.url) return res.json({ message: 'Required an url' })
 			let result = await urlebird.detailVideo(req.query.url)
 			return res.json({ result })
